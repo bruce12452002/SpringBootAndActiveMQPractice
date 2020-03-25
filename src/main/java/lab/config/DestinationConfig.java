@@ -1,4 +1,4 @@
-package config;
+package lab.config;
 
 import org.apache.activemq.command.ActiveMQQueue;
 import org.apache.activemq.command.ActiveMQTopic;
