@@ -1,4 +1,4 @@
-package bue;
+package lab.bue;
 
 import org.springframework.jms.core.JmsMessagingTemplate;
 import org.springframework.stereotype.Component;
