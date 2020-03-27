@@ -1,2 +1,4 @@
-rootProject.name = 'SpringBootAndActiveMQPractice'
+rootProject.name = 'SpringBootActiveMQPractice'
+include 'Product'
+include 'Consumer'
 

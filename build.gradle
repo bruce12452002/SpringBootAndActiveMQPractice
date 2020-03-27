@@ -10,21 +10,24 @@ buildscript {
     }
 }
 
-apply plugin: 'java'
-apply plugin: 'org.springframework.boot'
-apply plugin: 'io.spring.dependency-management'
+subprojects {
+    apply plugin: 'java'
+    apply plugin: 'org.springframework.boot'
+    apply plugin: 'io.spring.dependency-management'
 
-group = 'sbt'
-version = '0.0.1-SNAPSHOT'
-sourceCompatibility = 11
+    group = 'sbt'
+    version = '0.0.1-SNAPSHOT'
+    sourceCompatibility = 11
 
-repositories {
-    mavenLocal()
-    mavenCentral()
-}
+    repositories {
+        mavenLocal()
+        mavenCentral()
+    }
 
-dependencies {
-    implementation group: 'org.springframework.boot', name: 'spring-boot-starter'
-    implementation group: 'org.springframework.boot', name: 'spring-boot-starter-activemq'
-    testCompile 'org.springframework.boot:spring-boot-starter-test'
+    dependencies {
+        implementation group: 'org.springframework.boot', name: 'spring-boot-starter'
+        implementation group: 'org.springframework.boot', name: 'spring-boot-starter-web'
+        implementation group: 'org.springframework.boot', name: 'spring-boot-starter-activemq'
+        testCompile 'org.springframework.boot:spring-boot-starter-test'
+    }
 }
