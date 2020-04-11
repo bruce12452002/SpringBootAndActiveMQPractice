@@ -10,7 +10,7 @@ buildscript {
     }
 }
 
-subprojects {
+allprojects {
     apply plugin: 'java'
     apply plugin: 'org.springframework.boot'
     apply plugin: 'io.spring.dependency-management'
@@ -29,5 +29,11 @@ subprojects {
         implementation group: 'org.springframework.boot', name: 'spring-boot-starter-web'
         implementation group: 'org.springframework.boot', name: 'spring-boot-starter-activemq'
         testCompile 'org.springframework.boot:spring-boot-starter-test'
+    }
+}
+
+subprojects {
+    dependencies {
+        implementation group: 'org.apache.activemq', name: 'activemq-broker'
     }
 }
